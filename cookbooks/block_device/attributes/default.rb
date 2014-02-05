@@ -91,3 +91,7 @@ end.each do |device, number|
   default[:block_device][:devices][device][:iops] = ""
   default[:block_device][:devices][device][:volume_type] = "SATA"
 end
+
+#ephemeral setup
+default[:block_device][:ephemeral][:mount_point] = "/mnt/ephemeral"
+

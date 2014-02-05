@@ -29,7 +29,7 @@ package "lvm2"
 cloud = node[:cloud][:provider]
 
 # Generate fstab entry and check if entry already in fstab - assuming a reboot
-mount_point = "/mnt/ephemeral"
+mount_point = node[:block_device][:ephemeral][:mount_point]
 lvm_device = "lvol0"
 
 # The default mount point for ephemeral device in image.
