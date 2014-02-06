@@ -504,7 +504,7 @@ attribute "block_device/force_safety",
     "Override the dropdown and set to \"off\" to really run this recipe",
   :recipes => ["block_device::do_force_reset"]
 
-attribute "block_device/ephemeral/mount", 
+attribute "block_device/ephemeral/mount_point", 
   :display_name => "Ephemeral Mount Point",
   :description => "Ephemeral Mount Point",
   :type => "string",
