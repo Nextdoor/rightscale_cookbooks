@@ -38,7 +38,7 @@ lvm_device = "lvol0"
 if cloud == 'azure'
   ephemeral_mount_point = '/mnt/resource'
 else
-  ephemeral_mount_point = mount_point
+  ephemeral_mount_point = '/mnt/ephemeral'
 end
 
 # Ubuntu systems using upstart require the 'bootwait' option, otherwise
