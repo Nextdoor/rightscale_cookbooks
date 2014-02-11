@@ -508,5 +508,4 @@ attribute "block_device/ephemeral/mount_point",
   :display_name => "Ephemeral Mount Point",
   :description => "Ephemeral Mount Point",
   :type => "string",
-  :default => "/mnt/ephemeral",
   :required => "optional"
