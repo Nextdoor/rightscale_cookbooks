@@ -74,7 +74,7 @@ devices.sort.each_with_index.map do |device, index|
   [device, index + 1]
 end.each do |device, number|
   default[:block_device][:devices][device][:stripe_count] = "1"
-  default[:block_device][:devices][device][:volume_size] = "10"
+  default[:block_device][:devices][device][:volume_size].nil
   default[:block_device][:devices][device][:backup][:lineage] = ""
   default[:block_device][:devices][device][:nickname] = "data_storage#{number}"
   default[:block_device][:devices][device][:backup][:lineage_override] = ""
