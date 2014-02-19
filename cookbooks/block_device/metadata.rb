@@ -433,8 +433,7 @@ end.each do |device, number|
       "The directory of where to mount the block device (e.g., /mnt/storage)." +
       " Example: /mnt/storage",
     :type => "string",
-    :required => device != 'device2' ? 'recommended' : 'optional',
-    :default => "/mnt/storage#{number}",
+    :required => 'optional',
     :recipes => ["block_device::setup_block_device", "block_device::default"]
 
   attribute "block_device/devices/#{device}/vg_data_percentage",
