@@ -21,7 +21,7 @@ RightScale::BlockDeviceHelper.do_for_all_block_devices block_device do |device, 
   default[:block_device][:devices][device][:backup][:primary][:cron][:hour] = "*" # Every hour
   default[:block_device][:devices][device][:backup][:primary][:cron][:minute] = "#{5+rand(50)}"
 
-  default[:block_device][:devices][device][:mount_point] = "/mnt/storage#{number}"
+  #default[:block_device][:devices][device][:mount_point] = "/mnt/storage#{number}"
   default[:block_device][:devices][device][:vg_data_percentage] = "90"
   default[:block_device][:devices][device][:nickname] = "data_storage#{number}"
 end
@@ -87,7 +87,7 @@ end.each do |device, number|
   default[:block_device][:devices][device][:backup][:primary][:keep][:monthly] = "12"
   default[:block_device][:devices][device][:backup][:primary][:keep][:yearly] = "2"
   default[:block_device][:devices][device][:backup][:secondary][:container] = ""
-  default[:block_device][:devices][device][:mount_point] = "/mnt/storage#{number}"
+  #default[:block_device][:devices][device][:mount_point] = "/mnt/storage#{number}"
   default[:block_device][:devices][device][:iops] = ""
   default[:block_device][:devices][device][:volume_type] = "SATA"
 end
