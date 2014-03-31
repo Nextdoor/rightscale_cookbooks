@@ -1,4 +1,4 @@
-aintainer       "RightScale, Inc."
+maintainer       "RightScale, Inc."
 maintainer_email "support@rightscale.com"
 license          "Copyright RightScale, Inc. All rights reserved."
 description      "This cookbook provides the building blocks for Multi-Cloud" +
