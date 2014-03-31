@@ -1,4 +1,4 @@
-maintainer       "RightScale, Inc."
+aintainer       "RightScale, Inc."
 maintainer_email "support@rightscale.com"
 license          "Copyright RightScale, Inc. All rights reserved."
 description      "This cookbook provides the building blocks for Multi-Cloud" +
@@ -119,7 +119,7 @@ attribute "block_device/devices/default/backup/primary/cred/user",
     " For OpenStack Swift the format is: 'tenantID:username'." +
     " For clouds that do not require primary credentials (e.g., Amazon)," +
     " set to 'ignore'. Example: cred:CLOUD_ACCOUNT_USERNAME ",
-  :required => "recommended",
+  :required => "optional",
   :default => "",
   :recipes => ["block_device::default"]
 
@@ -130,7 +130,7 @@ attribute "block_device/devices/default/backup/primary/cred/secret",
     " use your Rackspace account API key (e.g., cred:RACKSPACE_AUTH_KEY)." +
     " For clouds that do not require primary credentials (e.g., Amazon)," +
     " set to 'ignore'. Example: cred:CLOUD_ACCOUNT_KEY",
-  :required => "recommended",
+  :required => "optional",
   :default => "",
   :recipes => ["block_device::default"]
 
