@@ -61,6 +61,7 @@ recipe "block_device::do_force_reset",
 # all recipes EXCEPT for block_device::default
 # which is used to "export" inputs to other cookbooks.
 all_recipes = [
+  "block_device::default",
   "block_device::do_primary_backup",
   "block_device::do_primary_restore",
   "block_device::do_secondary_backup",
@@ -141,7 +142,7 @@ attribute "block_device/devices/default/backup/primary/cloud",
     " (complete list of supported storage locations is in input dropdown)." +
     " This is only used if the server's cloud does not have volume support." +
     " Example: s3",
-  :required => "recommended",
+  :required => "optional",
   :choice => ros_clouds,
   :default => "",
   :recipes => ["block_device::default"]
