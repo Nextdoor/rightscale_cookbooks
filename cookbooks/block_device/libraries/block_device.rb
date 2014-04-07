@@ -153,10 +153,12 @@ module RightScale
     # @param keys [Array] array of block device attributes
     #
     def self.get_device_or_default(node, device, *keys)
+      Chef::Log.info "Node:#{node}, device:#{device}, keys:#{keys}"
       value = keys.reduce(node[:block_device][:devices][device]) do |values, key|
         break nil if values == nil
         values[key]
       end
+      Chef::Log.info "value:#{value}, default:#{node[:block_device][:devices][:default].inspect}"
       value = keys.reduce(node[:block_device][:devices][:default]) { |values, key| values[key] } if !value || value.empty?
       value
     end
