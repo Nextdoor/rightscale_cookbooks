@@ -119,7 +119,7 @@ attribute "block_device/devices/default/backup/primary/cred/user",
     " For OpenStack Swift the format is: 'tenantID:username'." +
     " For clouds that do not require primary credentials (e.g., Amazon)," +
     " set to 'ignore'. Example: cred:CLOUD_ACCOUNT_USERNAME ",
-  :required => "optional",
+  :required => "recommended",
   :default => "",
   :recipes => ["block_device::default"]
 
@@ -130,7 +130,7 @@ attribute "block_device/devices/default/backup/primary/cred/secret",
     " use your Rackspace account API key (e.g., cred:RACKSPACE_AUTH_KEY)." +
     " For clouds that do not require primary credentials (e.g., Amazon)," +
     " set to 'ignore'. Example: cred:CLOUD_ACCOUNT_KEY",
-  :required => "optional",
+  :required => "recommended",
   :default => "",
   :recipes => ["block_device::default"]
 
@@ -141,7 +141,7 @@ attribute "block_device/devices/default/backup/primary/cloud",
     " (complete list of supported storage locations is in input dropdown)." +
     " This is only used if the server's cloud does not have volume support." +
     " Example: s3",
-  :required => "optional",
+  :required => "recommended",
   :choice => ros_clouds,
   :default => "",
   :recipes => ["block_device::default"]
