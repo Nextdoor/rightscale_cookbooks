@@ -25,7 +25,7 @@ class Cloud
       CloudStack.new cloud_name
     when /Openstack/i, "HP Cloud", "Rackspace Private V3"
       Openstack.new cloud_name
-    when "Google"
+    when /^Google/
       Google.new cloud_name
     when /^Rackspace Open Cloud /
       RackspaceOpenCloud.new cloud_name
@@ -311,6 +311,7 @@ class Openstack < Cloud
   # @see Cloud#supports_ephemeral?
   #
   def supports_ephemeral?(server)
+    return false if @cloud_name =~ /havana/i
     true
   end
 
